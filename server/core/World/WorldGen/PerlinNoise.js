@@ -4,27 +4,27 @@
  * https://github.com/alterebro/perlin-noise-3d
  */
 export class PerlinNoise3d {
-    // Based on http://mrl.nyu.edu/~perlin/noise/
-    // Adapting from runemadsen/rune.noise.js
-    // Which was adapted from P5.js
-    // Which was adapted from PApplet.java
-    // which was adapted from toxi
-    // which was adapted from the german demo group farbrausch as used in their demo "art": http://www.farb-rausch.de/fr010src.zip
-    PERLIN_YWRAPB = 4;
-    PERLIN_YWRAP = 1 << this.PERLIN_YWRAPB;
-    PERLIN_ZWRAPB = 8;
-    PERLIN_ZWRAP = 1 << this.PERLIN_ZWRAPB;
-    PERLIN_SIZE = 4095;
-    SINCOS_PRECISION = 0.5;
-    SINCOS_LENGTH = Math.floor(360 / this.SINCOS_PRECISION);
-    sinLUT = new Array(this.SINCOS_LENGTH);
-    cosLUT = new Array(this.SINCOS_LENGTH);
-    DEG_TO_RAD = Math.PI / 180.0;
-    perlin_octaves = 4; // default to medium smooth
-    perlin_amp_falloff = 0.5; // 50% reduction/octave
-    perlin = null;
-    perlin_PI = this.SINCOS_LENGTH;
     constructor() {
+        // Based on http://mrl.nyu.edu/~perlin/noise/
+        // Adapting from runemadsen/rune.noise.js
+        // Which was adapted from P5.js
+        // Which was adapted from PApplet.java
+        // which was adapted from toxi
+        // which was adapted from the german demo group farbrausch as used in their demo "art": http://www.farb-rausch.de/fr010src.zip
+        this.PERLIN_YWRAPB = 4;
+        this.PERLIN_YWRAP = 1 << this.PERLIN_YWRAPB;
+        this.PERLIN_ZWRAPB = 8;
+        this.PERLIN_ZWRAP = 1 << this.PERLIN_ZWRAPB;
+        this.PERLIN_SIZE = 4095;
+        this.SINCOS_PRECISION = 0.5;
+        this.SINCOS_LENGTH = Math.floor(360 / this.SINCOS_PRECISION);
+        this.sinLUT = new Array(this.SINCOS_LENGTH);
+        this.cosLUT = new Array(this.SINCOS_LENGTH);
+        this.DEG_TO_RAD = Math.PI / 180.0;
+        this.perlin_octaves = 4; // default to medium smooth
+        this.perlin_amp_falloff = 0.5; // 50% reduction/octave
+        this.perlin = null;
+        this.perlin_PI = this.SINCOS_LENGTH;
         this.perlin_PI >>= 1;
         for (let i = 0; i < this.SINCOS_LENGTH; i++) {
             this.sinLUT[i] = Math.sin(i * this.DEG_TO_RAD * this.SINCOS_PRECISION);

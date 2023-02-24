@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"out/Meta/index";
 export const DreamStoneVoxelData = {
     name: "Dream Stone",
     shapeId: "Box",

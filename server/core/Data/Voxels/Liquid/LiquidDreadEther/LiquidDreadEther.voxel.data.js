@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"out/Meta/index";
 export const LiquidDreadEtherVoxelData = {
     name: "Liquid Dread Ether",
     shapeId: "Liquid",

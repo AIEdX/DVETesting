@@ -1,3 +1,8 @@
+{
+    VoxelData;
+}
+from;
+"out/Meta/index";
 export const LightDebugBoxVoxelData = {
     name: "Light Debug Box",
     shapeId: "Box",

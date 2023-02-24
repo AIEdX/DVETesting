@@ -1,3 +1,8 @@
+{
+    DivineVoxelEngineWorld;
+}
+from;
+"out/World/DivineVoxelEngineWorld.js"; //voxels
 //voxels
 import { DebugBoxVoxelData } from "../Voxels/Solid/DebugBox/DebugBox.voxel.data.js";
 import { LightDebugBoxVoxelData } from "../Voxels/Solid/LightDebugBox/LightDebugBox.voxel.data.js";

@@ -8,8 +8,8 @@ perlin.noiseSeed(12341234);
 perlin2.noiseSeed(989989989);
 bioneNoise.noiseSeed(59695022384);
 const waveLength = 100;
-const xOffSet = 1_000;
-const zOffSet = 1_000;
+const xOffSet = 1000;
+const zOffSet = 1000;
 const brush = DVEW.getBrush();
 const dataTool = DVEW.getDataTool();
 const dreamBiomeVoxels = {
@@ -187,7 +187,7 @@ export const WorldGen = {
         let madeSpke = false;
         for (let x = chunkX; x < this.chunkWidth + chunkX; x++) {
             for (let z = chunkZ; z < this.chunkDepth + chunkZ; z++) {
-                const bn = bioneNoise.get((x - 4_000) / 200, 0, (z + zOffSet) / 200);
+                const bn = bioneNoise.get((x - 4000) / 200, 0, (z + zOffSet) / 200);
                 let biome = "dream";
                 let voxels = dreamBiomeVoxels;
                 if (bn > 0.3) {
