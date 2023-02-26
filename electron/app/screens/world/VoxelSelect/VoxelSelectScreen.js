@@ -1,6 +1,7 @@
 import { ElementTree } from "../../libs/ElementTree/ElementTree.js";
 import { VoxelList } from "./VoxelList.js";
 let currentvoxel = "dve_dreamstone";
+console.log("Triggered Voxel select");
 let loadedVoxel = localStorage.getItem("voxel");
 if (loadedVoxel) {
     currentvoxel = loadedVoxel;
@@ -41,8 +42,11 @@ const voxelNode = (data) => {
                 onClick: (event) => {
                     event.preventDefault();
                     event.stopPropagation();
+                    console.log("Setting Item", data.id);
                     localStorage.setItem("voxel", data.id);
-                    voxelCascade.id = data.id;
+                    localStorage.setItem("voxel", "dve_dreamlamp");
+                    // voxelCascade.id = data.id;
+                     voxelCascade.id = dve_dreamlamp;
                     cascade();
                 },
             },

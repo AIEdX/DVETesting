@@ -18,7 +18,7 @@ const inte = setInterval(() => {
 }, 1);
 const WorldScreen = () => {
     return [
-        {
+        {  
             type: "div",
             attrs: {
                 className: "screen inactive",
@@ -29,6 +29,7 @@ const WorldScreen = () => {
                 receiver(elm, cascadeProps) {
                     if (cascadeProps.active) {
                         document.exitPointerLock();
+                        console.log("Activating Z screen menu");
                         elm.classList.remove("inactive");
                         elm.classList.add("active");
                     }
@@ -43,4 +44,5 @@ const WorldScreen = () => {
     ];
 };
 ElementTree.linkCSS(import.meta.url, "world.css");
+ console.log("loading World Screen now");
 ElementTree.bloomRoot(WorldScreen());

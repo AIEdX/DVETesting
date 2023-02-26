@@ -3,7 +3,7 @@ import { ElementTree } from "../../libs/ElementTree/ElementTree.js";
 import { VoxelList, VoxelListData } from "./VoxelList.js";
 
 let currentvoxel = "dve_dreamstone";
-
+console.log("Inside Voxel Screen Select");
 let loadedVoxel = localStorage.getItem("voxel");
 
 if (loadedVoxel) {
