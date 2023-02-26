@@ -10,10 +10,10 @@ export const WorldGen = {
             for (let z = chunkZ; z < this.chunkDepth + chunkZ; z++) {
                 for (let y = 0; y < this.worldHeight; y++) {
                     if (y < Math.floor(Math.random() * this.minY)) {
-                        brush.setId("dve_dreadstone");
+                        brush.setId("dve_dream-log");
                         brush.setXYZ(x, y, z).paint();
                         if (Math.random() > 0.8) {
-                            brush.setId("dve_dreadgrass");
+                            brush.setId("dve_dreadlamp");
                             brush.setXYZ(x, y + 1, z).paint();
                         }
                     }
@@ -22,7 +22,7 @@ export const WorldGen = {
         }
     },
     generateSpikeChunk(chunkX, chunkZ) {
-        brush.setId("dve_dreadstonepillar");
+        brush.setId("dve_dreadlamp");
         let rx = 0;
         for (let x = chunkX; x < this.chunkWidth + chunkX; x++) {
             let rz = 0;
@@ -35,10 +35,10 @@ export const WorldGen = {
                             y == this.minY + 54 ||
                             y == this.minY + 56 ||
                             y == this.minY + 86) {
-                            brush.setId("dve_dreadstonepillar").paint();
+                            brush.setId("dve_dreadlamp").paint();
                         }
                     }
-                    brush.setId("dve_dreadstonepillar");
+                    brush.setId("dve_dreadlamp");
                     if (rx == 0 || rz == 0 || rx == 15 || rz == 15) {
                         if (y == this.minY + 1 ||
                             y == this.minY + 26 ||
