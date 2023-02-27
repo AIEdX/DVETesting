@@ -301,4 +301,5 @@ gl_FragColor = vec4(finalColor.rgb,1);`);
         return shader;
     },
 };
+console.log("Init DVEShader");
 DVEShaders.$INIT();

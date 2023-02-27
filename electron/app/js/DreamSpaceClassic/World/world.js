@@ -5,7 +5,7 @@ import { WorldGen } from "./WorldGen/WorldGen.js";
 RegisterVoxels(DVEW);
 const brush = DVEW.getBrush();
 DVEW.parentComm.listenForMessage("voxel-add", (data, event) => {
-    console.log("Data inBrush is ", data, event);
+    // console.log("Data inBrush is ", data, event);
     brush
         .setId("dve_dream-log")
         .setXYZ(data[1], data[2], data[3])

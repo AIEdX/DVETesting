@@ -27,6 +27,7 @@ export class DataToolBase extends LocationBoundTool {
     setBuffer(buffer) {
         this._c = buffer;
         this.tags.setBuffer(this._c);
+        console.log("Buffer check", this._c);
     }
     getBuffer() {
         if (this._c instanceof DataView)
